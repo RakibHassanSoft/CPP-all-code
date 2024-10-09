@@ -61,3 +61,59 @@ public:
     }
     
 };
+
+
+/*
+Binomial Coefficients Rules and Properties:
+
+1. **Definition of Binomial Coefficients**:
+   The binomial coefficient is defined as:
+   C(n, k) = n! / (k!(n - k)!)
+
+   Where:
+   - n is the total number of items.
+   - k is the number of items chosen.
+   - ! represents the factorial of a number.
+
+2. **Symmetry Rule**:
+   Binomial coefficients are symmetric:
+   C(n, k) = C(n, n - k)
+   Example: C(5, 2) = C(5, 3) = 10
+
+3. **Pascal's Rule** (Recursive Rule):
+   The binomial coefficient follows a recursive relationship:
+   C(n, k) = C(n-1, k-1) + C(n-1, k)
+   Example: C(5, 2) = C(4, 1) + C(4, 2) = 4 + 6 = 10
+
+4. **Boundary Conditions**:
+   - C(n, 0) = C(n, n) = 1, for all n ≥ 0.
+   - Choosing 0 or all n items always results in 1 way.
+
+5. **Summation Rule**:
+   The sum of all binomial coefficients for a given n is equal to 2^n:
+   ∑(k=0 to n) C(n, k) = 2^n
+   Example: For n = 3: 1 + 3 + 3 + 1 = 8 = 2^3
+
+6. **Binomial Theorem**:
+   The binomial coefficients appear in the expansion of a binomial expression:
+   (x + y)^n = ∑(k=0 to n) C(n, k) x^(n-k) y^k
+   Example: (x + y)^3 = x^3 + 3x^2y + 3xy^2 + y^3
+
+7. **Vandermonde's Identity**:
+   A more advanced identity involving binomial coefficients:
+   C(m + n, r) = ∑(k=0 to r) C(m, k) C(n, r-k)
+
+8. **Multiplication Rule**:
+   If k ≤ n, then multiplying binomial coefficients gives:
+   k * C(n, k) = (n - k + 1) * C(n, k-1)
+
+9. **Negative Binomial Coefficients**:
+   For negative integers n, binomial coefficients are defined using:
+   C(n, k) = n(n - 1)(n - 2) ... (n - k + 1) / k!
+
+10. **Lucas' Theorem**:
+    Lucas' Theorem calculates binomial coefficients modulo a prime number:
+    C(n, k) ≡ C(n mod p, k mod p) (mod p)
+
+These rules and properties make binomial coefficients a powerful tool in combinatorics, probability theory, and algebra.
+*/
