@@ -1,0 +1,42 @@
+class Solution {
+public:
+//// way 1
+    vector<int> plusOne(vector<int>& digits) {
+        int n = digits.size();
+        
+        // Start from the last digit
+        for (int i = n - 1; i >= 0; i--) {
+            if (digits[i] < 9) {
+                // If the current digit is less than 9, just increment it and return
+                digits[i]++;
+                return digits;
+            }
+            // Set the current digit to 0 and continue the carry
+            digits[i] = 0;
+        }
+        
+        // If we finished the loop, it means we had a carry
+        digits.insert(digits.begin(), 1); // Insert 1 at the beginning
+        return digits;
+    }
+////way 2 code is correct but not applicable because we need to use long long
+// vector<int> plusOne(vector<int>& digits) {
+//         // Step 1: Convert digits to totalDigits
+//         int totalDigits = 0;
+//         for (int digit : digits) {
+//             totalDigits = totalDigits * 10 + digit; // Build the integer
+//         }
+        
+//         // Step 2: Increment by one
+//         totalDigits += 1;
+        
+//         // Step 3: Convert totalDigits back to digits
+//         vector<int> result;
+//         while (totalDigits > 0) {
+//             result.insert(result.begin(), totalDigits % 10); // Insert the last digit at the beginning
+//             totalDigits /= 10; // Remove the last digit
+//         }
+        
+//         return result; // Return the resulting digits
+//     }
+};
